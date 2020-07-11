@@ -21,7 +21,7 @@ git clone https://github.com/dalenguyen/firestore-import-export.git
 
 # Export database from Firestore
 
-This will help you create a backup of your collection and subcollection from Firestore to a JSON file name **firestore-export.json**
+This will help you create a backup of your collection and subcollection from Firestore to a JSON file inside **exports** directory.
 
 ```
 node export.js <gcp-service-account-json-path> <your-collection-name> <sub-collection-name-(optional)>
