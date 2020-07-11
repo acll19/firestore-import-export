@@ -1,4 +1,6 @@
 node_modules
 serviceAccountKey.json
+serviceAccountKey-prod.json
 firestore-export.json
 package-lock.json
+exports/

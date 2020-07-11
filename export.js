@@ -1,9 +1,9 @@
 const admin = require("firebase-admin");
 const fs = require('fs');
-const serviceAccount = require("./serviceAccountKey.json");
+const serviceAccount = require("./" + process.argv[2]);
 
-let collectionName = process.argv[2];
-let subCollection = process.argv[3];
+let collectionName = process.argv[3];
+let subCollection = process.argv[4];
 
 // You should replace databaseURL with your own
 admin.initializeApp({
@@ -32,11 +32,11 @@ let results = db.collection(collectionName)
 results.then(dt => {  
   getSubCollection(dt).then(() => {    
     // Write collection to JSON file
-    fs.writeFile("firestore-export.json", JSON.stringify(data), function(err) {
+    fs.writeFile("./exports/" + collectionName + ".json", JSON.stringify(data), function(err) {
         if(err) {
             return console.log(err);
         }
-        console.log("The file was saved!");
+        console.log("The file was saved in ./exports/" + collectionName + ".json");
     });
   })  
 })
