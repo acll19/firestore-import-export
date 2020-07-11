@@ -19,12 +19,6 @@ Download or clone this repository
 git clone https://github.com/dalenguyen/firestore-import-export.git
 ```
 
-Install NPM packages
-
-```
-npm install
-```
-
 # Export database from Firestore
 
 This will help you create a backup of your collection and subcollection from Firestore to a JSON file name **firestore-export.json**
